@@ -185,6 +185,14 @@ a {
     animation: fadeInUp 0.8s ease 0.6s forwards;
 }
 
+.availability {
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.7s forwards;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -506,6 +514,16 @@ section {
     font-size: 1rem;
 }
 
+.timeline-metrics {
+    margin: 14px 0 0 20px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.timeline-metrics li {
+    margin-bottom: 6px;
+}
+
 /* ===== Projects Section ===== */
 .projects-grid {
     display: grid;
@@ -623,6 +641,16 @@ section {
     font-size: 1rem;
     margin-bottom: 24px;
     line-height: 1.7;
+}
+
+.project-metrics {
+    margin: 10px 0 16px 20px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.project-metrics li {
+    margin-bottom: 6px;
 }
 
 .project-tech {

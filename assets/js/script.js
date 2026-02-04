@@ -65,7 +65,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Add active class to nav links on scroll
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinkEls = document.querySelectorAll('.nav-links a');
 
 function highlightNavOnScroll() {
     const scrollY = window.pageYOffset;
@@ -76,9 +76,13 @@ function highlightNavOnScroll() {
         const sectionId = section.getAttribute('id');
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
+            navLinkEls.forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href || !href.startsWith('#')) {
+                    return;
+                }
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
+                if (href === `#${sectionId}`) {
                     link.classList.add('active');
                 }
             });
