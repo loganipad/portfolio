@@ -1,4 +1,3 @@
-// ===== Mobile Menu Toggle =====
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
@@ -29,7 +28,6 @@ if (mobileMenuBtn && navLinks) {
     });
 }
 
-// ===== Scroll to Top Button =====
 const scrollToTopBtn = document.querySelector('.scroll-to-top');
 
 if (scrollToTopBtn) {
@@ -49,7 +47,6 @@ if (scrollToTopBtn) {
     });
 }
 
-// Smooth scroll for in-page anchors
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -67,7 +64,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
 });
 
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('section[id], header[id]');
 const navLinkEls = document.querySelectorAll('.nav-links a');
 
 function highlightNavOnScroll() {
@@ -76,10 +73,20 @@ function highlightNavOnScroll() {
     }
 
     const scrollY = window.pageYOffset;
-    const path = window.location.pathname.split('/').pop() || 'index.html';
-    const onHome = path === '' || path === 'index.html';
+    const onHome = Boolean(document.getElementById('stack') && document.getElementById('projects'));
 
     if (!onHome) {
+        return;
+    }
+
+    const aboutEl = document.getElementById('about');
+    if (aboutEl && scrollY < aboutEl.offsetTop - 120) {
+        navLinkEls.forEach((link) => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#top') {
+                link.classList.add('active');
+            }
+        });
         return;
     }
 
@@ -88,8 +95,11 @@ function highlightNavOnScroll() {
     let matchedSection = false;
     sections.forEach((section) => {
         const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 110;
         const sectionId = section.getAttribute('id');
+        if (!sectionId || sectionId === 'top') {
+            return;
+        }
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinkEls.forEach((link) => {
@@ -104,8 +114,7 @@ function highlightNavOnScroll() {
 
     if (!matchedSection) {
         navLinkEls.forEach((link) => {
-            const href = link.getAttribute('href');
-            if (href === 'index.html' || href === '/') {
+            if (link.getAttribute('href') === '#top') {
                 link.classList.add('active');
             }
         });
@@ -130,7 +139,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.08,
+    threshold: 0.06,
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -147,8 +156,8 @@ if (!prefersReducedMotion.matches) {
         `<style>
             .reveal-on-scroll {
                 opacity: 0;
-                transform: translateY(12px);
-                transition: opacity 0.45s ease, transform 0.45s ease;
+                transform: translateY(14px);
+                transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
             }
             .reveal-on-scroll.animate-in {
                 opacity: 1 !important;
@@ -158,7 +167,9 @@ if (!prefersReducedMotion.matches) {
     );
 
     document
-        .querySelectorAll('.project-card, .timeline-item, .surface-card, .photo-card, .layout-grid-2')
+        .querySelectorAll(
+            '.project-card, .timeline-item, .surface-card, .photo-card, .capabilities-grid .surface-card, .tech-col'
+        )
         .forEach((el) => {
             el.classList.add('reveal-on-scroll');
             observer.observe(el);
