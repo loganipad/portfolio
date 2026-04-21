@@ -73,14 +73,14 @@ function highlightNavOnScroll() {
     }
 
     const scrollY = window.pageYOffset;
-    const onHome = Boolean(document.getElementById('stack') && document.getElementById('projects'));
+    const onHome = Boolean(document.getElementById('capabilities') && document.getElementById('projects'));
 
     if (!onHome) {
         return;
     }
 
-    const aboutEl = document.getElementById('about');
-    if (aboutEl && scrollY < aboutEl.offsetTop - 120) {
+    const capabilitiesEl = document.getElementById('capabilities');
+    if (capabilitiesEl && scrollY < capabilitiesEl.offsetTop - 120) {
         navLinkEls.forEach((link) => {
             link.classList.remove('active');
             if (link.getAttribute('href') === '#top') {
