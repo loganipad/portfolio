@@ -168,7 +168,7 @@ if (!prefersReducedMotion.matches) {
 
     document
         .querySelectorAll(
-            '.project-card, .timeline-item, .surface-card, .photo-card, .capabilities-grid .surface-card, .tech-col'
+            '.project-card, .timeline-item, .surface-card, .photo-card, .capabilities-grid .surface-card, .tech-col, .case-study-section, .challenge-card, .case-highlight-tile, .case-outcome-panel'
         )
         .forEach((el) => {
             el.classList.add('reveal-on-scroll');

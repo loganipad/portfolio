@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -41,9 +41,9 @@
         </div>
     </nav>
 
-    <header id="top" class="hero">
+    <header id="top" class="hero hero--home">
         <div class="hero-inner container">
-            <div class="hero-content">
+            <div class="hero-content hero-content--intro">
                 <h1 class="hero-headline">Build production-ready web applications.</h1>
                 <p class="hero-subhead">
                     I’m Logan Howard Thomas, an independent full-stack developer focused on building modern web applications with real-time systems, secure authentication, payments, APIs, and scalable backend architecture.
@@ -112,32 +112,118 @@
                     <h2 id="projects-heading" class="section-title">Selected projects</h2>
                     <p class="section-lede">Product-focused builds with clear scope, stack, and links.</p>
                 </header>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="placeholder-img">budy.study</div>
-                        </div>
-                        <div class="project-content">
-                            <p class="case-kicker">Founder · Study collaboration</p>
-                            <h3 class="project-title">budy.study</h3>
-                            <p class="project-summary">
-                                Real-time study collaboration platform with group features, WebSocket-based messaging, and secure authentication.
-                            </p>
-                            <div class="project-tech">
-                                <span class="badge">React</span>
-                                <span class="badge">Node.js</span>
-                                <span class="badge">WebSockets</span>
-                                <span class="badge">Supabase</span>
-                                <span class="badge">Auth0</span>
-                                <span class="badge">Vercel</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://budy.study" class="project-link" target="_blank" rel="noopener noreferrer">Live site</a>
-                                <a href="https://github.com/loganipad" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </div>
-                        </div>
-                    </article>
 
+                <article class="case-study" id="budy-study" aria-labelledby="case-budy-title">
+                    <header class="case-study-hero">
+                        <div class="case-study-hero-main">
+                            <p class="case-study-eyebrow">Featured case study · Founder-led product</p>
+                            <h3 id="case-budy-title" class="case-study-title">budy.study</h3>
+                            <p class="case-study-subtitle">Real-time study collaboration platform</p>
+                            <p class="case-study-lede">
+                                A full-stack platform for collaborative study sessions with real-time messaging, group features, and secure authentication.
+                            </p>
+                            <div class="case-study-actions">
+                                <a href="https://budy.study" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live site</a>
+                                <a href="https://github.com/loganipad" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="case-study-hero-visual" aria-hidden="true">
+                            <span class="case-study-visual-mark">budy.study</span>
+                        </div>
+                    </header>
+
+                    <div class="case-study-body">
+                        <section class="case-study-section" aria-labelledby="case-overview-heading">
+                            <h4 id="case-overview-heading" class="case-study-h">Overview</h4>
+                            <p class="case-study-prose">
+                                budy.study is a collaboration product for students running live study sessions—groups, messaging, and session context in one place. It is built for people who need reliable real-time coordination without juggling disconnected tools. The problem it solves is simple: when time is tight, identity, chat, and structured collaboration should stay in sync so the group can focus on the work—not the wiring behind it.
+                            </p>
+                        </section>
+
+                        <section class="case-study-section" aria-labelledby="case-built-heading">
+                            <h4 id="case-built-heading" class="case-study-h">What I built</h4>
+                            <ul class="case-built-grid">
+                                <li>Real-time chat and group collaboration flows</li>
+                                <li>WebSocket-based, low-latency messaging</li>
+                                <li>Secure authentication with Auth0</li>
+                                <li>Backend and data architecture on Supabase</li>
+                                <li>End-to-end full-stack implementation (UI, APIs, persistence)</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-study-section" aria-labelledby="case-tech-heading">
+                            <h4 id="case-tech-heading" class="case-study-h">Technical highlights</h4>
+                            <ul class="case-highlight-grid">
+                                <li class="case-highlight-tile">React frontend</li>
+                                <li class="case-highlight-tile">Node.js backend</li>
+                                <li class="case-highlight-tile">WebSockets for real-time communication</li>
+                                <li class="case-highlight-tile">Supabase for backend and data</li>
+                                <li class="case-highlight-tile">Auth0 for authentication</li>
+                                <li class="case-highlight-tile">Deployment and production-oriented architecture</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-study-section" aria-labelledby="case-role-heading">
+                            <h4 id="case-role-heading" class="case-study-h">My role</h4>
+                            <ul class="case-role-list">
+                                <li>Founder</li>
+                                <li>Product design</li>
+                                <li>Full-stack engineering</li>
+                                <li>System architecture</li>
+                                <li>Deployment</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-study-section" aria-labelledby="case-challenges-heading">
+                            <h4 id="case-challenges-heading" class="case-study-h">Challenges &amp; solutions</h4>
+                            <div class="challenge-grid">
+                                <article class="challenge-card">
+                                    <p class="challenge-kicker">Challenge</p>
+                                    <p class="challenge-title">Responsive real-time messaging</p>
+                                    <p class="solution-kicker">Solution</p>
+                                    <p class="solution-copy">WebSocket-based messaging so updates stay low-latency across clients.</p>
+                                </article>
+                                <article class="challenge-card">
+                                    <p class="challenge-kicker">Challenge</p>
+                                    <p class="challenge-title">Secure user access</p>
+                                    <p class="solution-kicker">Solution</p>
+                                    <p class="solution-copy">Auth0 integration for authentication and session security.</p>
+                                </article>
+                                <article class="challenge-card">
+                                    <p class="challenge-kicker">Challenge</p>
+                                    <p class="challenge-title">Scalable backend structure</p>
+                                    <p class="solution-kicker">Solution</p>
+                                    <p class="solution-copy">Supabase to support structured workflows, data modeling, and user state.</p>
+                                </article>
+                            </div>
+                        </section>
+
+                        <section class="case-study-section" aria-labelledby="case-outcome-heading">
+                            <h4 id="case-outcome-heading" class="case-study-h">Outcome</h4>
+                            <div class="case-outcome-panel">
+                                <p class="case-study-prose case-study-prose--tight">
+                                    The shipped product is a production-style collaborative platform: a concrete example of real-time, full-stack engineering with clear ownership across design, architecture, and deployment. It is meant to demonstrate how I build modern web applications—auth, data, and live updates in one coherent system—without claiming usage metrics I do not have.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section class="case-study-section case-study-section--stack" aria-labelledby="case-stack-heading">
+                            <h4 id="case-stack-heading" class="case-study-h">Tech stack</h4>
+                            <div class="case-stack-pills">
+                                <span class="case-stack-pill">React</span>
+                                <span class="case-stack-pill">Node.js</span>
+                                <span class="case-stack-pill">WebSockets</span>
+                                <span class="case-stack-pill">Supabase</span>
+                                <span class="case-stack-pill">Auth0</span>
+                                <span class="case-stack-pill">JavaScript</span>
+                                <span class="case-stack-pill">HTML/CSS</span>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+
+                <p class="projects-more-label">Additional projects</p>
+                <div class="projects-grid">
                     <article class="project-card">
                         <div class="project-image">
                             <div class="placeholder-img">Adaptive learning</div>
@@ -221,7 +307,8 @@
                     </p>
                 </header>
                 <p class="contact-text">
-                    Send a short note with the role or project, timeline, and stack. I reply with clear next steps.
+                    <span class="contact-cta">Send a short note with the role or project, timeline, and stack.</span>
+                    <span class="contact-note">I reply with clear next steps.</span>
                 </p>
                 <div class="contact-links">
                     <a href="mailto:loganipad@gmail.com" class="contact-item" aria-label="Email Logan Howard Thomas">
