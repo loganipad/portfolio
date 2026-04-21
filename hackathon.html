@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Skip Link for Accessibility -->
@@ -36,6 +36,7 @@
                 <span class="hamburger-line"></span>
             </button>
             <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html" class="active">Projects</a></li>
@@ -45,59 +46,60 @@
     </nav>
 
     <main id="main-content">
-        <!-- Hero Section -->
         <header class="hero">
             <div class="hero-content">
-                <p class="greeting">Cal Poly Humboldt 2025</p>
-                <h1 class="name">Annual Hackathon</h1>
-                <p class="tagline">🥈 2nd Place Achievement</p>
+                <p class="greeting">Cal Poly Humboldt · 2025</p>
+                <h1 class="name">Annual hackathon</h1>
+                <p class="tagline">Second place among 15 teams · Northcoast Regional Land Trust mapping build</p>
                 <div class="hero-cta">
-                    <a href="#photos" class="btn btn-primary">View Photos</a>
-                    <a href="index.html" class="btn btn-primary">Back to Portfolio</a>
+                    <a href="#photos" class="btn btn-primary">View photos</a>
+                    <a href="index.html" class="btn btn-secondary">Back to portfolio</a>
                 </div>
             </div>
         </header>
 
-        <!-- Hackathon Details Section -->
-        <section id="details" class="about">
+        <section id="details" class="section-block section-block--tight">
             <div class="container">
-                <h2 class="section-title">Project Details</h2>
-                <div class="about-content">
-                    <p>
-                        In this intense 24-hour coding competition with 15 participating teams, our team collaborated 
-                        to build an interactive full-stack mapping application for the Northcoast Regional Land Trust 
-                        to help visualize and manage conservation areas. Working around the clock, we demonstrated 
-                        our ability to rapidly prototype, problem-solve under extreme time pressure, and deliver 
-                        a functional solution that impressed the judges enough to earn us 2nd place out of all competing teams.
-                    </p>
-                    <p>
-                        The hackathon challenged us to think creatively, work efficiently as a team, and implement 
-                        both front-end and back-end technologies in a cohesive application. This experience showcased 
-                        our technical skills, teamwork, and ability to deliver results in high-pressure environments.
-                    </p>
-                    <div class="skills">
-                        <h3>Technologies Used</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">Team Collaboration</span>
-                        </div>
+                <header class="section-header">
+                    <p class="section-eyebrow">Case summary</p>
+                    <h2 class="section-title">What we shipped in 24 hours</h2>
+                    <p class="section-lede">A cohesive full-stack mapping workflow with clear roles across backend, UI, and data prep.</p>
+                </header>
+                <div class="layout-grid-2">
+                    <div class="surface-card">
+                        <h3 class="stack-heading">Outcome</h3>
+                        <p class="stack-copy">
+                            Across 15 teams, we delivered a working prototype for conservation-area visualization and management—mapping, CRUD, and filtering—then presented a live demo to judges.
+                        </p>
+                    </div>
+                    <div class="surface-card">
+                        <h3 class="stack-heading">Team execution</h3>
+                        <p class="stack-copy">
+                            Rapid iteration, tight communication, and parallel workstreams across frontend and backend kept momentum high through the overnight sprint.
+                        </p>
+                    </div>
+                </div>
+                <div class="surface-muted skills-block skills-panel">
+                    <h2>Technologies</h2>
+                    <div class="skill-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Team collaboration</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Hackathon Photos Section -->
         <section id="photos" class="hackathon-photos">
             <div class="container">
-                <h2 class="section-title">Hackathon Experience</h2>
-                <p class="photos-description">
-                    Here are some memorable moments from our Cal Poly Humboldt 2025 Annual Hackathon experience 
-                    where our team achieved 2nd place with the Northcoast Regional Land Trust mapping application.
-                </p>
+                <header class="section-header">
+                    <p class="section-eyebrow">Gallery</p>
+                    <h2 class="section-title">Hackathon moments</h2>
+                    <p class="section-lede">Team collaboration and the awards presentation. Second place with the Northcoast Regional Land Trust mapping application.</p>
+                </header>
                 <div class="photos-grid">
                     <div class="photo-card">
                         <img src="assets/images/team.jpeg" alt="Team collaboration during hackathon" class="hackathon-photo">
@@ -106,15 +108,15 @@
                         </div>
                     </div>
                     <div class="photo-card">
-                        <img src="assets/images/award.jpeg" alt="2nd place award ceremony" class="hackathon-photo">
+                        <img src="assets/images/award.jpeg" alt="Second place award ceremony" class="hackathon-photo">
                         <div class="photo-caption">
-                            <p>🥈 Award Ceremony</p>
+                            <p>Award ceremony</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="back-to-portfolio">
-                    <a href="index.html" class="btn btn-primary">Back to Portfolio</a>
+                    <a href="index.html" class="btn btn-secondary">Back to portfolio</a>
                 </div>
             </div>
         </section>
