@@ -9,19 +9,19 @@
     <meta property="og:description" content="2nd place at Cal Poly Humboldt 2025. Full-stack mapping application built in 24 hours.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23171414'/><text x='32' y='42' text-anchor='middle' font-size='26' font-family='Georgia,serif' fill='%23ffe56a'>LT</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%231a1814'/><text x='32' y='42' text-anchor='middle' font-size='22' font-family='Georgia,serif' fill='%23f2efe8'>LHT</text></svg>">
     <title>Hackathon | Logan Howard Thomas</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,520;12..96,680&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="index.html#top" class="logo">Logan Thomas</a>
+            <a href="index.html#top" class="logo"><span class="monogram" aria-hidden="true">LHT</span> Logan Thomas</a>
             <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -41,36 +41,50 @@
     <main id="main-content">
         <header class="hero">
             <div class="sheet">
-                <p class="who">Cal Poly Humboldt, 2025</p>
+                <p class="kicker">Cal Poly Humboldt, 2025</p>
                 <h1>Annual hackathon.</h1>
-                <p class="lede">
-                    2nd place among 10 teams. A mapping application for the Northcoast Regional Land Trust, built and presented in 24 hours.
-                </p>
-                <p class="jump">
-                    <a href="#photos">Photos</a>
-                    <a href="index.html#projects">Back to work</a>
+                <p class="lede">2nd place among 10 teams. A mapping application for the Northcoast Regional Land Trust, built and presented in 24 hours.</p>
+                <p class="actions">
+                    <a class="btn btn-primary" href="#photos">Photos</a>
+                    <a class="btn btn-secondary" href="index.html#projects">Back to work</a>
                 </p>
             </div>
         </header>
 
         <section id="details" class="block">
-            <div class="sheet split">
-                <h2>What we shipped</h2>
-                <div>
-                    <p>
-                        A working prototype for looking at conservation areas and editing them: a map, filters, and the records behind each area. We demoed it live.
-                    </p>
-                    <p>
-                        Frontend and backend moved at the same time. Someone was always unblocking the next piece, which is the only way a 24-hour build stays standing.
-                    </p>
-                    <p class="stack">Node.js, MySQL, JavaScript, HTML/CSS, Git</p>
+            <div class="sheet">
+                <div class="section-top">
+                    <h2>What we shipped</h2>
+                    <p>A map, filters, and the records behind each conservation area. Demoed live for the judges.</p>
+                </div>
+                <div class="rows">
+                    <article class="row">
+                        <div>
+                            <h3>Outcome</h3>
+                        </div>
+                        <div>
+                            <p>A working prototype for looking at conservation areas and editing them. Mapping, CRUD, and filtering, shown the next morning.</p>
+                        </div>
+                    </article>
+                    <article class="row">
+                        <div>
+                            <h3>How the night went</h3>
+                        </div>
+                        <div>
+                            <p>Frontend and backend moved at the same time. Someone was always unblocking the next piece.</p>
+                            <p class="meta">Node.js, MySQL, JavaScript, HTML/CSS, Git</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="photos" class="block">
-            <div class="sheet split">
-                <h2>Photos</h2>
+            <div class="sheet">
+                <div class="section-top">
+                    <h2>Photos</h2>
+                    <p>The overnight work, and the awards the next day.</p>
+                </div>
                 <div class="photos">
                     <figure>
                         <img src="assets/images/team.jpeg" alt="The team working together during the hackathon">
@@ -80,16 +94,16 @@
                         <img src="assets/images/award.jpeg" alt="The award presentation">
                         <figcaption>Awards the next day.</figcaption>
                     </figure>
-                    <p><a href="index.html#projects">Back to work</a></p>
                 </div>
+                <p class="actions"><a class="btn btn-secondary" href="index.html#projects">Back to work</a></p>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="sheet foot">
-            <p>Logan Howard Thomas. Long Beach.</p>
-            <p>© 2026</p>
+            <p>Logan Howard Thomas</p>
+            <p>Long Beach · © 2026</p>
         </div>
     </footer>
 
