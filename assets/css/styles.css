@@ -101,26 +101,10 @@ article[id] {
 }
 
 .logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
     color: var(--ink);
     text-decoration: none;
     font-size: 18px;
     letter-spacing: -0.03em;
-}
-
-.monogram {
-    display: inline-grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    background: var(--night);
-    color: var(--night-text);
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0;
-    font-weight: 500;
 }
 
 .nav-links {
