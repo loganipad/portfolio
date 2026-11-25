@@ -120,18 +120,19 @@
                         <h3 id="case-iphones-title">iphones.la</h3>
                         <p>
                             The shop already sells used Apple devices. I am building the buyback side.
-                            A customer describes a device in a chatbot, a Python pricing flow turns that into a cash offer, and staff can take the same thread from a React inbox.
+                            A customer describes a device in a chatbot running on Qwen. A Python pricing flow turns that into a cash offer, and staff can take the same thread from a React inbox. Messages go through BlueBubbles.
                         </p>
                         <p>
                             The inbox is a Fastify API with WebSockets. Threads, device details, and offers live in SQLite. The public shop is up. The buyback system is the part still being built.
                         </p>
-                        <p class="stack">React, Fastify, WebSockets, SQLite, Python</p>
+                        <p class="stack">React, Fastify, WebSockets, SQLite, Python, Qwen, BlueBubbles</p>
                         <p class="actions">
                             <a class="btn btn-light" href="https://iphones.la" target="_blank" rel="noopener noreferrer">iphones.la</a>
                         </p>
                     </div>
                     <ul class="feature-list">
-                        <li>Chatbot for buying and selling devices</li>
+                        <li>Qwen chatbot for buying and selling devices</li>
+                        <li>BlueBubbles for the message thread</li>
                         <li>Python pricing flow, from a description to an offer</li>
                         <li>Staff can take over any thread</li>
                         <li>Live updates over WebSockets</li>
