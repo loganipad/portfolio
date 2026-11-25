@@ -300,6 +300,15 @@ h1 {
     counter-increment: cap;
 }
 
+.caps li.ai-use {
+    grid-column: 1 / -1;
+    padding-right: 0;
+}
+
+.caps li.ai-use p + p {
+    margin-top: 8px;
+}
+
 .caps li::before {
     content: counter(cap, decimal-leading-zero);
     display: block;
